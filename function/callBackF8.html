@@ -1,0 +1,35 @@
+<head></head>
+<script>
+    Array.prototype.map2 = function (myCallBack) {     //function này là chính map2
+        let arr = [];
+        for (let i = 0; i < this.length; i++) {
+            let cousre = myCallBack(this[i]);
+            arr.push(cousre)
+            
+        };
+        // console.log(arr[0]);
+        return arr;
+    };
+
+    const courses = [
+        "JavaScript",
+        "PHP",
+        "Python"
+    ];
+    // courses.map2(function (value) {
+    //     console.log(value);
+    // })
+
+    htmls = courses.map2(function (value) {         //function này là một function được truyền vào map2(), tức cũng là myCallBack()
+        return `<h2>${value}</h2>`
+    })
+
+    console.log(htmls.join(''));
+
+    // htmls = courses.map(function(value) {
+    //     return `<h2>${value}</h2>`;
+    // });
+
+    // console.log(htmls.join(''));
+
+</script>

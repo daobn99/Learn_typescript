@@ -1,0 +1,32 @@
+<head></head>
+<script>
+    /**
+     * Sync : đồng bộ : thằng nào viết trước chạy trước, viết sau chạy sau (code thông thường thôi)
+     * Async: bất đồng bộ : viết trước nhưng cũng có thể chạy sau
+     * CallBack sinh ra để giải quyết bất đồng bộ
+     * Promise
+    */
+
+    /** resolve hay reject đặt tên gì cũng được (a, b)
+     *  nhưng thằng phía trước (a) tự hiểu là thành công (hàm then đc chạy), 
+     * thằng phía sau (b) tự hiểu là thất bại (hàm catch đc chạy).
+     * */
+   let myPromise = new Promise(
+    function(resolve, reject) {    //đặt tên gì cũng đc nhưng thường đặt thế này
+        resolve()  // Successfully ! Done !
+        // reject()
+    }   
+   );
+
+   myPromise
+        .then(function() {  //chạy khi thành công
+            console.log("Successfully !");
+        })
+        .catch(function() {  //chạy khi thất bại
+            console.log("Failure !");
+        })
+        .finally(function() {  //sau khi thành công hoặc thất bại chạy xong thì finally được chạy
+            console.log("Done !");
+        })
+
+</script>
