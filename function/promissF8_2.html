@@ -6,11 +6,11 @@
     sleep(1000)
         .then(() => {
             console.log(1);
-            return sleep(1000)
+            return sleep(1000) //return ở đây là tham số đầu vào ms của setTimeout dòng then bên dưới
         })
         .then(() => {
             console.log(2);
-            return sleep(1000)
+            return sleep(1000)  //return ở đây là tham số đầu vào ms của setTimeout dòng then bên dưới
         }
         ).then(() => {
             console.log(3);
